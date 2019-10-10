@@ -231,11 +231,11 @@ header .navBar nav a {
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+  text-align: left;
 }
 @media (max-width: 500px) {
   .home .content-section .text-content {
     width: 100%;
-    text-align: center;
   }
 }
 .home .content-section .text-content .img-content {
