@@ -26,8 +26,7 @@
       .img-content {
         width: 48%;
         padding-left: 1%;
-        border-radius: 15%;
-        border-radius: 15px;
+        border-radius: 10px;
 
         @media @mobile {
           width: 100%;
@@ -43,12 +42,10 @@
 
 
   }
-  .content-destination{}
+  
 
-  .content-section inverse-content {
+  .inverse-content {
     padding-bottom: 30px;
-    
-    
 
     .text-content {
       padding-left: 1%;
@@ -62,11 +59,11 @@
 
     @media @mobile {
       width: 100%;
-      align-content: center;
-      flex-wrap: wrap-reverse;
-
-      // .flexboxall(column, wrap-reverse, center);
-
+      display: flex;
+      flex-direction: column-reverse;
+        .text-content{
+          text-align: left;
+        }
     }
   }
 
