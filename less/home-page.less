@@ -1,31 +1,51 @@
 .home {
+  header {
+    // display: flex;
+    .flexboxall(column, no-wrap, center);
+    border-bottom: 2px dashed @navigation-border;
+
+  }
 
   .content-section {
+    max-width: 900px;
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+      text-align: left;
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      img {
-        border-radius: 10px;
+      @media @mobile {
+        width: 100%;
       }
+
+      .img-content {
+        width: 48%;
+        padding-left: 1%;
+        border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+          align-content: center;
+        }
+      }
+
+      // @media @mobile {
+      //   .flexboxall(column, wrap, center);
+
+      // }
     }
+
+
   }
+  
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
 
     .text-content {
       padding-left: 1%;
@@ -36,14 +56,31 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+        .text-content{
+          text-align: left;
+        }
+    }
   }
 
   .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-top: 2px dashed @navigation-border;
+    
 
     img {
+      width:100%;
       border-radius: 10px;
+    }
+    @media @mobile{
+      width: 100%;
+      padding: 20px 10px;
     }
   }
 
@@ -52,10 +89,45 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      text-align: left;
+     
+
+      .btn {
+        width: 80%;
+        padding: 8px;
+        color:white;
+        background-color: rgb(33, 105, 98);
+        text-align: center;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: lighten(rgb(33, 105, 98);10%);
+        }
+        @media @mobile{
+          width: 100%;
+          
+        }
+      }
+    }
+    @media @mobile{
+      // .flexboxall(column, wrap, center);
+      width: 80%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .destination{
+        width: 100%;
+        margin: 20px 20px;
+        text-align: left;
+      }
     }
   }
-}// home
+
+  // home
+}

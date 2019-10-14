@@ -1,1 +1,26 @@
 // Navigation Styles here
+
+
+
+header .navBar {
+    
+    .flexboxall(row, no-wrap, space-between);
+    padding-bottom: 20px;
+
+
+    nav {
+        width: 50%;
+        .flexboxall(row, flex-wrap, space-between);
+        align-items: center;
+
+        // align-items:baseline;
+        a {
+            color: black;
+        }
+    }
+
+    @media @mobile{
+        .flexboxall(column, no-wrap, center);
+        align-items: center;
+        }
+}
